@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navLinks = [
     { label: "Explore", href: "#explore" },
     { label: "Food", href: "#food" },
@@ -11,8 +13,15 @@ const navLinks = [
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <a
             href="#top"
-            className="text-lg font-bold tracking-tight text-miami-ocean sm:text-xl"
-          >
+            className="flex items-center gap-2 text-lg font-bold tracking-tight text-miami-ocean sm:text-xl"
+            >
+        <Image
+            src="/images/fwc2026-logo.png"
+            alt="Fifa World Cup 2026"
+            width={20}
+            height={28}
+            className="h-6 w-auto"
+        />
             Miami <span className="text-miami-teal">26</span>
           </a>
   
