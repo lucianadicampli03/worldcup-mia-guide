@@ -28,3 +28,58 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 
 }
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  animation: hero-fade-up 0.75s ease-out both;
+}
+
+.hero-enter-1 { animation-delay: 0.1s; }
+.hero-enter-2 { animation-delay: 0.25s; }
+.hero-enter-3 { animation-delay: 0.4s; }
+.hero-enter-4 { animation-delay: 0.55s; }
+
+@keyframes hero-bounce-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  90% {
+    transform: translateY(-1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-mascot-enter {
+  animation: hero-bounce-up 1s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+  animation-delay: 0.85s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-mascot-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
