@@ -6,6 +6,7 @@ type WeatherWidgetProps = {
   placeName: string;
   latitude: number;
   longitude: number;
+  compact?: boolean;
 };
 
 type WeatherState =
@@ -21,12 +22,14 @@ export default function WeatherWidget({
   placeName,
   latitude,
   longitude,
+  compact = false,
 }: WeatherWidgetProps) {
   const [weather, setWeather] = useState<WeatherState>({ status: "loading" });
   const forecastUrl = weatherUrl(latitude, longitude);
 
   useEffect(() => {
     const controller = new AbortController();
+    let cancelled = false;
 
     async function fetchWeather() {
       try {
@@ -43,14 +46,26 @@ export default function WeatherWidget({
 
         if (!response.ok) throw new Error("Weather fetch failed");
 
-        const data = await response.json();
+        const data = (await response.json()) as {
+          current?: { temperature_2m?: number; weather_code?: number };
+        };
+
+        if (cancelled) return;
+
+        const temperature = data.current?.temperature_2m;
+        const code = data.current?.weather_code;
+
+        if (temperature == null || code == null) {
+          throw new Error("Incomplete weather data");
+        }
 
         setWeather({
           status: "success",
-          temperature: Math.round(data.current.temperature_2m),
-          code: data.current.weather_code,
+          temperature: Math.round(temperature),
+          code,
         });
       } catch (error) {
+        if (cancelled) return;
         if (error instanceof DOMException && error.name === "AbortError") return;
         setWeather({ status: "error" });
       }
@@ -58,38 +73,54 @@ export default function WeatherWidget({
 
     fetchWeather();
 
-    return () => controller.abort();
+    return () => {
+      cancelled = true;
+      controller.abort();
+    };
   }, [latitude, longitude]);
 
-  if (weather.status === "error") return null;
+  const sizeClasses = compact
+    ? "left-2 top-2 gap-1 px-2 py-1 text-[10px] sm:left-auto sm:right-3 sm:top-3 sm:gap-1.5 sm:px-2.5 sm:py-1.5 sm:text-xs md:px-3 md:py-2 md:text-sm"
+    : "right-3 top-3 gap-1.5 px-2.5 py-1.5 text-xs sm:px-3 sm:py-2 sm:text-sm";
 
   return (
     <a
       href={forecastUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1.5 text-xs font-semibold text-slate-700 shadow-md backdrop-blur-sm transition-transform hover:scale-105 sm:px-3 sm:py-2 sm:text-sm"
+      className={`absolute z-10 flex items-center rounded-full bg-white/95 font-semibold text-slate-700 shadow-md backdrop-blur-sm transition-transform hover:scale-105 ${sizeClasses}`}
       aria-label={
         weather.status === "success"
           ? `Weather in ${placeName}: ${weather.temperature} degrees Fahrenheit. Open forecast.`
-          : `Loading weather for ${placeName}`
+          : `Weather for ${placeName}`
       }
+      onClick={(event) => event.stopPropagation()}
     >
-      {weather.status === "loading" ? (
-        <span className="h-4 w-14 animate-pulse rounded-full bg-slate-200" />
-      ) : (
+      {weather.status === "loading" && (
+        <span
+          className={`animate-pulse rounded-full bg-slate-200 ${
+            compact ? "h-3 w-10 sm:h-4 sm:w-14" : "h-4 w-14"
+          }`}
+        />
+      )}
+      {weather.status === "error" && (
+        <span className="text-slate-400">—°</span>
+      )}
+      {weather.status === "success" && (
         <>
-          <WeatherIcon code={weather.code} />
+          <WeatherIcon code={weather.code} compact={compact} />
           <span>{weather.temperature}°F</span>
-          <ChevronIcon />
+          {!compact && <ChevronIcon />}
         </>
       )}
     </a>
   );
 }
 
-function WeatherIcon({ code }: { code: number }) {
-  const className = "h-4 w-4 shrink-0 text-miami-ocean";
+function WeatherIcon({ code, compact }: { code: number; compact?: boolean }) {
+  const className = compact
+    ? "h-3 w-3 shrink-0 text-miami-ocean sm:h-4 sm:w-4"
+    : "h-4 w-4 shrink-0 text-miami-ocean";
 
   if (code === 0) {
     return (

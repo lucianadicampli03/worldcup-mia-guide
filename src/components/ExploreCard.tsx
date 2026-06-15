@@ -15,78 +15,66 @@ export default function ExploreCard({ place, onExploreOptions }: ExploreCardProp
   const { t } = useTranslations();
 
   return (
-    <>
-      {/* Mobile: compact 2-column tile */}
+    <article className="smooth-card flex flex-col overflow-hidden rounded-xl border border-slate-200/80 bg-white shadow-md sm:rounded-2xl">
+      <div className="relative aspect-[4/3] w-full sm:aspect-[16/10]">
+        <Image
+          src={place.image}
+          alt={place.name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <WeatherWidget
+          placeName={place.name}
+          latitude={place.latitude}
+          longitude={place.longitude}
+          compact
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent sm:from-black/40 sm:via-transparent sm:to-transparent" />
+        <p className="absolute bottom-2.5 left-2.5 right-2.5 text-sm font-bold leading-tight text-white sm:hidden">
+          {place.name}
+        </p>
+        <a
+          href={place.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${t.explore.openInMaps}: ${place.name}`}
+          className="absolute bottom-3 right-3 hidden h-9 w-9 items-center justify-center rounded-full bg-white shadow-md transition-transform hover:scale-105 sm:flex"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <Image src="/globe.svg" alt="" width={18} height={18} aria-hidden />
+        </a>
+      </div>
+
+      {/* Mobile tile body */}
       <button
         type="button"
         onClick={onExploreOptions}
-        className="smooth-card group flex w-full flex-col overflow-hidden rounded-xl border border-slate-200/80 bg-white text-left shadow-md sm:hidden"
+        className="smooth-btn w-full p-2.5 text-left sm:hidden"
       >
-        <div className="relative aspect-[4/3] w-full">
-          <Image
-            src={place.image}
-            alt={place.name}
-            fill
-            className="object-cover transition-transform duration-500 group-active:scale-105"
-            sizes="50vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-          <p className="absolute bottom-2.5 left-2.5 right-2.5 text-sm font-bold leading-tight text-white">
-            {place.name}
-          </p>
-        </div>
-        <div className="p-2.5">
-          <p className="line-clamp-2 text-[11px] leading-snug text-slate-600">
-            {place.description}
-          </p>
-          <span className="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-miami-ocean">
-            {t.explore.exploreOptions}
-            <ArrowIcon />
-          </span>
-        </div>
+        <p className="line-clamp-2 text-[11px] leading-snug text-slate-600">
+          {place.description}
+        </p>
+        <span className="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-miami-ocean">
+          {t.explore.exploreOptions}
+          <ArrowIcon />
+        </span>
       </button>
 
-      {/* Tablet/desktop: full card */}
-      <article className="smooth-card hidden flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md sm:flex">
-        <div className="relative aspect-[16/10] w-full">
-          <Image
-            src={place.image}
-            alt={place.name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 50vw, 33vw"
-          />
-          <WeatherWidget
-            placeName={place.name}
-            latitude={place.latitude}
-            longitude={place.longitude}
-          />
-          <a
-            href={place.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${t.explore.openInMaps}: ${place.name}`}
-            className="absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md transition-transform hover:scale-105"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <Image src="/globe.svg" alt="" width={18} height={18} aria-hidden />
-          </a>
-        </div>
+      {/* Desktop full body */}
+      <div className="hidden flex-1 flex-col p-4 sm:flex sm:p-5">
+        <ExplorePlaceOverview place={place} />
 
-        <div className="flex flex-1 flex-col p-4 sm:p-5">
-          <ExplorePlaceOverview place={place} />
-
-          <button
-            type="button"
-            onClick={onExploreOptions}
-            className="smooth-btn mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-miami-ocean px-4 py-2.5 text-sm font-semibold text-white hover:bg-miami-teal"
-          >
-            <SearchIcon />
-            {t.explore.exploreOptions}
-          </button>
-        </div>
-      </article>
-    </>
+        <button
+          type="button"
+          onClick={onExploreOptions}
+          className="smooth-btn mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-miami-ocean px-4 py-2.5 text-sm font-semibold text-white hover:bg-miami-teal"
+        >
+          <SearchIcon />
+          {t.explore.exploreOptions}
+        </button>
+      </div>
+    </article>
   );
 }
 
