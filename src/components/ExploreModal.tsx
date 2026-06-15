@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, type RefObject } from "react";
+import ExplorePlaceOverview from "@/components/ExplorePlaceOverview";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useTranslations } from "@/i18n/use-translations";
 import type { ExploreCategory, ExplorePlace } from "@/types/explore";
@@ -69,14 +70,21 @@ export default function ExploreModal({ place, onClose }: ExploreModalProps) {
         </div>
 
         <div className="space-y-6 px-5 py-5 sm:space-y-8 sm:px-6 sm:py-6">
-          {place.categories.map((category, categoryIndex) => (
-            <CategoryBlock
-              key={category.id}
-              category={category}
-              categoryIndex={categoryIndex}
-              scrollRoot={scrollRef}
-            />
-          ))}
+          <ExplorePlaceOverview place={place} compact />
+
+          <div className="border-t border-slate-100 pt-2">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-miami-teal">
+              {t.explore.exploreOptions}
+            </h3>
+            {place.categories.map((category, categoryIndex) => (
+              <CategoryBlock
+                key={category.id}
+                category={category}
+                categoryIndex={categoryIndex}
+                scrollRoot={scrollRef}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -98,6 +106,7 @@ function CategoryBlock({
       root={scrollRoot}
       variant="fade-up"
       delay={categoryIndex * 60}
+      className="mb-6 last:mb-0"
     >
       <h3 className="flex items-center gap-2 text-lg font-bold text-miami-ocean">
         <CategoryIcon id={category.id} />
