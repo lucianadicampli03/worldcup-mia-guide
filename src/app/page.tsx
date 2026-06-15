@@ -1,6 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ExploreSection from "@/components/ExploreSection";
+import FoodSection from "@/components/FoodSection";
+import TransitSection from "@/components/TransitSection";
+import SurvivalSection from "@/components/SurvivalSection";
 import Footer from "@/components/Footer";
+import AssistantButton from "@/components/AssistantButton";
 
 export default function Home() {
   return (
@@ -12,22 +17,14 @@ export default function Home() {
       <main>
         <Hero />
 
-        {/* Temporary — remove when real sections are built */}
-        <section id="explore" className="min-h-[50vh] bg-miami-sand p-8">
-          <h2 className="text-2xl font-bold">Explore (placeholder)</h2>
-        </section>
-        <section id="food" className="min-h-[50vh] bg-white p-8">
-          <h2 className="text-2xl font-bold">Food (placeholder)</h2>
-        </section>
-        <section id="survival" className="min-h-[50vh] bg-miami-sand p-8">
-          <h2 className="text-2xl font-bold">Survival (placeholder)</h2>
-        </section>
-        <section id="assistant" className="min-h-[50vh] bg-white p-8">
-          <h2 className="text-2xl font-bold">Assistant (placeholder)</h2>
-        </section>
+        <ExploreSection />
+        <FoodSection />
+        <SurvivalSection />
+        <TransitSection />
       </main>
 
       <Footer />
+      <AssistantButton />
     </>
   );
 }

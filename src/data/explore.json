@@ -1,0 +1,555 @@
+[
+  {
+    "id": "south-beach",
+    "name": "South Beach",
+    "description": "Art Deco streets, Ocean Drive, and the beach — Miami's postcard skyline.",
+    "insiderTip": "Skip the busiest Ocean Drive cafes. Walk one block inland on Collins for better food and shorter lines.",
+    "commuteFromStadium": "About 45–60 min by car via I-95. Leave early on match days — traffic stacks up fast.",
+    "safety": "Very tourist-heavy and patrolled; watch your belongings on the beach.",
+    "image": "/images/explore/south-beach.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=South+Beach+Miami",
+    "latitude": 25.7907,
+    "longitude": -80.13,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Art Deco Welcome Center",
+            "image": "/images/explore/art-deco-welcome-center.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Art+Deco+Welcome+Center+Miami+Beach"
+          },
+          {
+            "name": "The Bass Museum",
+            "image": "/images/explore/the-bass-museum.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Bass+Museum+Miami+Beach"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Puerto Sagua",
+            "image": "/images/explore/puerto-sagua.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Puerto+Sagua+Miami+Beach"
+          },
+          {
+            "name": "Yardbird Southern Table & Bar",
+            "image": "/images/explore/yardbird.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Yardbird+Southern+Table+Bar+Miami+Beach"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "Sweet Liberty",
+            "image": "/images/explore/sweet-liberty.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sweet+Liberty+Miami+Beach"
+          },
+          {
+            "name": "Mango's Tropical Cafe",
+            "image": "/images/explore/mangos-tropical-cafe.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mangos+Tropical+Cafe+Ocean+Drive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wynwood",
+    "name": "Wynwood",
+    "description": "Street art walls, galleries, and warehouse-turned-bars — Miami's creative district.",
+    "insiderTip": "Visit Wynwood Walls early morning for photos without crowds, then grab coffee on NW 2nd Ave before the nightlife rush.",
+    "commuteFromStadium": "About 35–50 min by car. Uber is easier than parking — lots fill up on weekends.",
+    "safety": "Generally safe and busy; stick to well-lit main streets at night.",
+    "image": "/images/explore/wynwood.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wynwood+Miami",
+    "latitude": 25.801,
+    "longitude": -80.1994,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Wynwood Walls",
+            "image": "/images/explore/wynwood-walls.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wynwood+Walls+Miami"
+          },
+          {
+            "name": "Rubell Museum",
+            "image": "/images/explore/rubell-museum.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Rubell+Museum+Miami"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "KYU Miami",
+            "image": "/images/explore/kyu-miami.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=KYU+Wynwood+Miami"
+          },
+          {
+            "name": "Amavi Miami",
+            "image": "/images/explore/amavi-miami.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Amavi+Miami+Wynwood"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "Wood Tavern",
+            "image": "/images/explore/wood-tavern.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wood+Tavern+Wynwood"
+          },
+          {
+            "name": "1-800-Lucky",
+            "image": "/images/explore/1800-lucky.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=1-800-Lucky+Wynwood"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "design-district",
+    "name": "Miami Design District",
+    "description": "Luxury fashion, contemporary art, and architect-designed plazas — Miami's high-end creative corridor north of Wynwood.",
+    "insiderTip": "Start at the Palm Court for public art and architecture, then walk NE 41st St for flagship stores. Weekday mornings are calmest for photos.",
+    "commuteFromStadium": "About 35–50 min by car. Street parking is limited — use the Design District garages or rideshare.",
+    "safety": "Upscale and well-patrolled; busy during events and weekend shopping.",
+    "image": "/images/explore/design-district.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Miami+Design+District",
+    "latitude": 25.8057,
+    "longitude": -80.1923,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "ICA Miami",
+            "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&q=80",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=ICA+Miami+Design+District"
+          },
+          {
+            "name": "Palm Court",
+            "image": "/images/explore/palm-court.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm+Court+Miami+Design+District"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Mister O1 Extraordinary Pizza",
+            "image": "/images/explore/mister-o1-pizza.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mister+O1+Design+District+Miami"
+          },
+          {
+            "name": "L'Atelier de Joël Robuchon",
+            "image": "/images/explore/latelier-robuchon.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LAtelier+Joel+Robuchon+Miami"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "MC Kitchen",
+            "image": "/images/explore/mc-kitchen.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=MC+Kitchen+Design+District"
+          },
+          {
+            "name": "Lagniappe",
+            "image": "/images/explore/lagniappe.png",
+            "mapsUrl": "https://maps.app.goo.gl/6xqJ4jkpBkNmwAFH6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "little-havana",
+    "name": "Little Havana",
+    "description": "Cuban culture on Calle Ocho — domino parks, live music, and cafecito on every corner.",
+    "insiderTip": "Start at Domino Park, then walk to Versailles for a Cuban sandwich. Skip the souvenir shops on the main strip.",
+    "commuteFromStadium": "About 40–55 min by car via Palmetto or I-95. Street parking is tight — use a garage on SW 8th St.",
+    "safety": "Welcoming and lively; normal city awareness at night.",
+    "image": "/images/explore/little-havana.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Little+Havana+Miami",
+    "latitude": 25.765,
+    "longitude": -80.2436,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Domino Park",
+            "image": "/images/explore/domino-park.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Maximo+Gomez+Domino+Park+Miami"
+          },
+          {
+            "name": "Cuban Memorial Park",
+            "image": "/images/explore/cuban-memorial-park.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cuban+Memorial+Park+Miami"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Sanguich de Miami",
+            "image": "/images/explore/sanguich-de-miami.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sanguich+de+Miami"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "Ball & Chain",
+            "image": "/images/explore/ball-and-chain.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ball+and+Chain+Little+Havana"
+          },
+          {
+            "name": "Hoy Como Ayer",
+            "image": "/images/explore/hoy-como-ayer.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hoy+Como+Ayer+Miami"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brickell",
+    "name": "Brickell",
+    "description": "Glass towers, rooftop bars, and Biscayne Bay views — Miami's downtown financial hub.",
+    "insiderTip": "Happy hour on a rooftop beats a pricey dinner. Brickell City Centre is your AC escape on hot afternoons.",
+    "commuteFromStadium": "About 30–45 min by car. Metromover is free downtown if you park on the edge and ride in.",
+    "safety": "Very safe and well-lit; busy on weekdays, quieter on weekends.",
+    "image": "/images/explore/brickell.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Brickell+Miami",
+    "latitude": 25.7617,
+    "longitude": -80.1918,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Pérez Art Museum",
+            "image": "/images/explore/perez-art-museum.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Perez+Art+Museum+Miami"
+          },
+          {
+            "name": "Miami Circle",
+            "image": "/images/explore/miami-circle.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Miami+Circle+Archaeological+Site"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Komodo",
+            "image": "/images/explore/komodo.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Komodo+Miami+Brickell"
+          },
+          {
+            "name": "Zuma Miami",
+            "image": "/images/explore/zuma-miami.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Zuma+Miami+Brickell"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "Sugar Rooftop",
+            "image": "/images/explore/sugar-rooftop.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sugar+Rooftop+Brickell"
+          },
+          {
+            "name": "Blackbird Ordinary",
+            "image": "/images/explore/blackbird-ordinary.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Blackbird+Ordinary+Brickell"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bayside",
+    "name": "Bayside Marketplace",
+    "description": "Waterfront shops, live music, and bay cruises steps from downtown — touristy but fun, right next to Bayfront Park.",
+    "insiderTip": "Skip the chain restaurants inside. Walk to the marina for boat tours or grab a drink with a bay view out back.",
+    "commuteFromStadium": "About 30–45 min by car. Consider Metromover from Brickell or a short rideshare from downtown hotels.",
+    "safety": "Heavy tourist area with security; watch bags in crowded spots.",
+    "image": "/images/explore/bayside.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bayside+Marketplace+Miami",
+    "latitude": 25.7781,
+    "longitude": -80.186,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Skyviews Miami Wheel",
+            "image": "/images/explore/skyviews-miami-wheel.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Skyviews+Miami+Wheel"
+          },
+          {
+            "name": "Freedom Tower",
+            "image": "/images/explore/freedom-tower.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Freedom+Tower+Miami"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Hard Rock Cafe",
+            "image": "/images/explore/hard-rock-cafe-bayside.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Bayside+Miami"
+          },
+          {
+            "name": "Bubba Gump Shrimp Co.",
+            "image": "/images/explore/bubba-gump.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bubba+Gump+Bayside+Miami"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "Wet Willie's",
+            "image": "/images/explore/wet-willies.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wet+Willies+Bayside+Miami"
+          },
+          {
+            "name": "The Mojito Bar",
+            "image": "/images/explore/mojito-bar.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mojito+Bar+Bayside+Miami"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bayfront-park",
+    "name": "Bayfront Park",
+    "description": "Downtown waterfront green space — home of the official FIFA Fan Festival during World Cup 2026, with big screens, food, and live music on Biscayne Bay.",
+    "insiderTip": "Arrive before peak evening hours for easier entry. Combine with a walk through Bayside or the Metromover — parking downtown fills up fast on festival nights.",
+    "commuteFromStadium": "About 30–45 min from Hard Rock Stadium by car. From downtown hotels, it's walkable — or take the free Metromover to Bayfront Park.",
+    "safety": "Large organized event with security; keep valuables secure in crowds and stay hydrated in the heat.",
+    "image": "/images/explore/bayfront-park.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bayfront+Park+Miami",
+    "latitude": 25.775,
+    "longitude": -80.186,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "FPL Solar Amphitheater",
+            "image": "/images/explore/fpl-solar-amphitheater.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=FPL+Solar+Amphitheater+Bayfront+Park"
+          },
+          {
+            "name": "Bayfront Park",
+            "image": "/images/explore/bayfront-park-walk.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bayfront+Park+Miami"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Fan Fest Food Village",
+            "image": "https://images.unsplash.com/photo-1555939593-7d4dada6fffc?w=600&q=80",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bayfront+Park+Miami"
+          },
+          {
+            "name": "Area 31",
+            "image": "/images/explore/area-31.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Area+31+Miami"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "American Social",
+            "image": "/images/explore/american-social.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=American+Social+Brickell"
+          },
+          {
+            "name": "Bayfront Beer Garden",
+            "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bayfront+Park+Miami"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "coconut-grove",
+    "name": "Coconut Grove",
+    "description": "Banyan trees, sailboats, and a laid-back waterfront village — Miami's oldest neighborhood with a bohemian soul.",
+    "insiderTip": "Visit Vizcaya Museum early to beat crowds, then stroll the marina at sunset. CocoWalk is touristy — head to Main Highway for better bites.",
+    "commuteFromStadium": "About 35–50 min by car via US-1. Parking near the waterfront fills up on weekends — Uber is easier.",
+    "safety": "Generally safe and family-friendly; busier and well-lit along the main strip at night.",
+    "image": "/images/explore/coconut-grove.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Coconut+Grove+Miami",
+    "latitude": 25.727,
+    "longitude": -80.242,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Vizcaya Museum & Gardens",
+            "image": "/images/explore/vizcaya-museum.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Vizcaya+Museum+Miami"
+          },
+          {
+            "name": "The Barnacle Historic State Park",
+            "image": "/images/explore/the-barnacle.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Barnacle+Historic+State+Park"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "GreenStreet Cafe",
+            "image": "/images/explore/greenstreet-cafe.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=GreenStreet+Cafe+Coconut+Grove"
+          },
+          {
+            "name": "AVA",
+            "image": "/images/explore/ava-miami.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AVA+Mediterranean+Coconut+Grove+Miami"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "Barracuda",
+            "image": "/images/explore/barracuda.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Barracuda+Raw+Bar+Coconut+Grove"
+          },
+          {
+            "name": "Taurus Drinkery",
+            "image": "/images/explore/taurus-drinkery.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Taurus+Drinkery+Coconut+Grove"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "coral-gables",
+    "name": "Coral Gables",
+    "description": "Mediterranean Revival architecture, tree-lined streets, and upscale dining — the 'City Beautiful' south of downtown.",
+    "insiderTip": "Walk Miracle Mile for shopping and cafés. Books & Books is a great AC stop. Avoid US-1 at rush hour — side streets are calmer.",
+    "commuteFromStadium": "About 40–55 min by car via Palmetto or US-1. Street parking on Miracle Mile is limited — use a garage.",
+    "safety": "Very safe, upscale residential area; normal awareness in busy commercial zones.",
+    "image": "/images/explore/coral-gables.png",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Coral+Gables+Miami",
+    "latitude": 25.7215,
+    "longitude": -80.2684,
+    "categories": [
+      {
+        "id": "culture",
+        "title": "Museums & Culture",
+        "spots": [
+          {
+            "name": "Fairchild Tropical Botanic Garden",
+            "image": "/images/explore/fairchild-garden.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fairchild+Tropical+Botanic+Garden"
+          },
+          {
+            "name": "Coral Gables Museum",
+            "image": "/images/explore/coral-gables-museum.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Coral+Gables+Museum"
+          }
+        ]
+      },
+      {
+        "id": "dining",
+        "title": "Dining & Restaurants",
+        "spots": [
+          {
+            "name": "Hillstone",
+            "image": "/images/explore/hillstone.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hillstone+Coral+Gables"
+          },
+          {
+            "name": "Christy's Restaurant",
+            "image": "/images/explore/christys-restaurant.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Christys+Restaurant+Coral+Gables"
+          }
+        ]
+      },
+      {
+        "id": "nightlife",
+        "title": "Bars & Nightlife",
+        "spots": [
+          {
+            "name": "John Martin's",
+            "image": "/images/explore/john-martins.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=John+Martins+Coral+Gables"
+          },
+          {
+            "name": "Bodega Taqueria y Tequila",
+            "image": "/images/explore/bodega.png",
+            "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bodega+Taqueria+Tequila+Coral+Gables"
+          }
+        ]
+      }
+    ]
+  }
+]

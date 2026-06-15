@@ -1,0 +1,57 @@
+{
+  "title": "Getting Around Miami",
+  "subtitle": "Move between downtown, the fan fest, and the coast — without guessing which train is which.",
+  "matchDayNote": "Hard Rock Stadium is not on Metromover or Metrorail. Plan Uber/Lyft or bus for match days; use the options below for downtown and regional trips.",
+  "options": [
+    {
+      "id": "metromover",
+      "name": "Metromover",
+      "tagline": "Free automated rail downtown",
+      "description": "Elevated people-mover loops through the urban core. Perfect for Brickell, Bayfront Park, Bayside Marketplace, and connecting to Brightline at MiamiCentral.",
+      "price": "FREE",
+      "fanTip": "Use Metromover for fan fest nights — no fare, no parking stress downtown.",
+      "mapUrl": "https://www.miamidade.gov/resources/transportation_publicworks/documents/metromover-map.pdf",
+      "mapLabel": "Metromover map (PDF)",
+      "websiteUrl": "https://www.miamidade.gov/transportation-public-transit/rail/metromover.asp",
+      "websiteLabel": "Metromover info",
+      "highlights": ["Brickell", "Bayfront Park", "Bayside", "Government Center"]
+    },
+    {
+      "id": "metrorail",
+      "name": "Metrorail",
+      "tagline": "Elevated train across the county",
+      "description": "Paid rail from Miami International Airport through downtown to Dadeland and beyond. Transfer to Metromover at Government Center.",
+      "price": "Paid — EASY Card or contactless",
+      "fanTip": "Airport → Government Center, then hop on Metromover to the waterfront.",
+      "mapUrl": "https://www.miamidade.gov/resources/transportation_publicworks/documents/metrorail-map.pdf",
+      "mapLabel": "Metrorail map (PDF)",
+      "websiteUrl": "https://www.miamidade.gov/transportation-public-transit/rail/metrorail.asp",
+      "websiteLabel": "Metrorail info",
+      "highlights": ["MIA Airport", "Government Center", "Brickell", "Dadeland"]
+    },
+    {
+      "id": "metrobus",
+      "name": "Metrobus",
+      "tagline": "Buses across Miami-Dade",
+      "description": "County-wide bus network for neighborhoods and routes rail doesn't reach. Use the trip planner for stadium and hotel connections.",
+      "price": "Paid — same fare system as Metrorail",
+      "fanTip": "Best when your hotel or match-day stop isn't near a rail station.",
+      "mapUrl": "https://www.miamidade.gov/resources/transportation_publicworks/documents/system-maps-web.pdf",
+      "mapLabel": "Full system map (PDF)",
+      "websiteUrl": "https://www.miamidade.gov/transportation-public-transit/",
+      "websiteLabel": "Trip planner & fares",
+      "highlights": ["County-wide routes", "Downtown connectors", "Late-night options vary by line"]
+    },
+    {
+      "id": "brightline",
+      "name": "Brightline",
+      "tagline": "High-speed rail up the coast",
+      "description": "Private train from MiamiCentral downtown to Aventura, Fort Lauderdale, Boca Raton, West Palm Beach, and Orlando. Steps from Bayside and Metromover.",
+      "price": "Paid — book ahead for best fares",
+      "fanTip": "MiamiCentral connects to Metrorail, Metrobus, and Metromover — one hub for downtown.",
+      "websiteUrl": "https://www.gobrightline.com/train-stations/fl/miami",
+      "websiteLabel": "MiamiCentral station",
+      "highlights": ["MiamiCentral", "Fort Lauderdale", "West Palm Beach", "Orlando"]
+    }
+  ]
+}

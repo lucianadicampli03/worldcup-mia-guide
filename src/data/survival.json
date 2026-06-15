@@ -1,0 +1,49 @@
+{
+  "phrases": [
+    {
+      "spanish": "¿Dónde está...?",
+      "english": "Where is...?",
+      "tag": "Essential"
+    },
+    {
+      "spanish": "La cuenta, por favor",
+      "english": "Check please",
+      "tag": "High"
+    },
+    {
+      "spanish": "¿Cuánto cuesta?",
+      "english": "How much does it cost?",
+      "tag": "High"
+    },
+    {
+      "spanish": "¿Habla inglés?",
+      "english": "Do you speak English?",
+      "tag": "Helpful"
+    },
+    {
+      "spanish": "Un agua, por favor",
+      "english": "A water, please",
+      "tag": "Miami heat"
+    }
+  ],
+  "proTip": {
+    "title": "Pro Travel Tip",
+    "body": "Miami heat is no joke — drink water constantly, wear sunscreen, and plan outdoor time for morning or evening. Afternoon storms are common Jun–Nov. Tipping is standard: 18–20% at restaurants, a few dollars for rideshare and hotel staff. Cards are widely accepted, but keep cash for small cafés and food trucks."
+  },
+  "gettingAround": {
+    "title": "Getting Around Miami",
+    "description": "See the full Transit section for Metromover, Metrorail, Metrobus maps and Brightline — or use the quick links below.",
+    "links": [
+      {
+        "name": "Transit guide",
+        "description": "Maps, fan tips, and links for all downtown rail options.",
+        "url": "#transit"
+      },
+      {
+        "name": "Uber / Lyft",
+        "description": "Best for stadium runs, Wynwood nights, and late rides home.",
+        "url": "https://www.uber.com"
+      }
+    ]
+  }
+}
