@@ -10,6 +10,8 @@ export const frDictionary: Dictionary = {
       transit: "Transports",
       assistant: "Assistant",
       changeLanguage: "Changer de langue",
+      openMenu: "Ouvrir le menu",
+      closeMenu: "Fermer le menu",
     },
     hero: {
       badge: "Coupe du Monde de la FIFA 2026™ — Stade de Miami",
@@ -86,6 +88,9 @@ export const frDictionary: Dictionary = {
       errorGeneric:
         "Une erreur s'est produite. Réessayez ou appuyez sur une suggestion.",
       errorApi: "Clutch n'a pas pu répondre pour le moment.",
+      teaserMessage:
+        "Salut ! 🦅 Des questions sur la Coupe du Monde à Miami ? Je suis là !",
+      dismissTeaser: "Fermer le message",
       sectionLabels: {
         explore: "Explorer",
         food: "Gastronomie",

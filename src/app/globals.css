@@ -26,7 +26,148 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal-fade-up {
+  transform: translateY(28px);
+}
+
+.scroll-reveal-fade-up-lg {
+  transform: translateY(40px);
+}
+
+.scroll-reveal-scale-in {
+  transform: scale(0.94) translateY(20px);
+}
+
+.scroll-reveal-fade-in {
+  transform: none;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Modal animations */
+@keyframes modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-backdrop-enter {
+  animation: modal-backdrop-in 0.35s ease-out both;
+}
+
+.modal-panel-enter {
+  animation: modal-panel-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes nav-drawer-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-drawer-enter {
+  animation: nav-drawer-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes assistant-teaser-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.assistant-teaser-enter {
+  animation: assistant-teaser-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+}
+
+/* Smooth interactive surfaces */
+.smooth-card {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease;
+}
+
+.smooth-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.08),
+    0 8px 10px -6px rgb(0 0 0 / 0.06);
+}
+
+.smooth-btn {
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.smooth-btn:active {
+  transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .modal-backdrop-enter,
+  .modal-panel-enter,
+  .nav-drawer-enter,
+  .assistant-teaser-enter {
+    animation: none;
+  }
+
+  .smooth-card:hover {
+    transform: none;
+  }
 }
 
 @keyframes hero-fade-up {
@@ -81,5 +222,11 @@ body {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

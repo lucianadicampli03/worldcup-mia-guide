@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { useTranslations } from "@/i18n/use-translations";
 import type { Locale } from "@/i18n/types";
 
@@ -37,9 +37,31 @@ export default function AssistantButton() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showTeaser, setShowTeaser] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messageIdRef = useRef(0);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("clutch-teaser-dismissed") !== "1") {
+      setShowTeaser(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (open) setShowTeaser(false);
+  }, [open]);
+
+  function dismissTeaser(event: MouseEvent) {
+    event.stopPropagation();
+    setShowTeaser(false);
+    sessionStorage.setItem("clutch-teaser-dismissed", "1");
+  }
+
+  function openAssistant() {
+    setOpen(true);
+    setShowTeaser(false);
+  }
 
   useEffect(() => {
     setMessages([
@@ -164,7 +186,7 @@ export default function AssistantButton() {
   }
 
   return (
-    <div id="assistant" className="fixed bottom-4 right-4 z-[90] sm:bottom-6 sm:right-6">
+    <div id="assistant" className="fixed bottom-4 right-4 z-[90] flex max-w-[calc(100vw-2rem)] flex-col items-end sm:bottom-6 sm:right-6">
       {open && (
         <div
           ref={panelRef}
@@ -288,10 +310,37 @@ export default function AssistantButton() {
         </div>
       )}
 
+      {!open && showTeaser && (
+        <div className="assistant-teaser-enter mb-3 flex w-full max-w-[min(18rem,calc(100vw-5rem))] items-start gap-2 sm:max-w-xs">
+          <button
+            type="button"
+            onClick={openAssistant}
+            className="smooth-btn relative flex-1 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-left shadow-lg hover:border-miami-teal/30"
+          >
+            <p className="text-sm font-bold text-miami-ocean">{t.assistant.name}</p>
+            <p className="mt-1 text-sm leading-snug text-slate-600">
+              {t.assistant.teaserMessage}
+            </p>
+            <span
+              aria-hidden
+              className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 border-b border-r border-slate-200 bg-white"
+            />
+          </button>
+          <button
+            type="button"
+            onClick={dismissTeaser}
+            className="smooth-btn flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-400 shadow-sm hover:text-slate-600"
+            aria-label={t.assistant.dismissTeaser}
+          >
+            <CloseIcon />
+          </button>
+        </div>
+      )}
+
       <button
         type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        className="relative ml-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-miami-coral bg-white shadow-lg transition-transform hover:scale-105 sm:h-16 sm:w-16"
+        onClick={() => (open ? setOpen(false) : openAssistant())}
+        className="smooth-btn relative ml-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-miami-coral bg-white shadow-lg hover:scale-105 sm:h-16 sm:w-16"
         aria-expanded={open}
         aria-label={open ? t.assistant.closeAssistant : t.assistant.openAssistant}
       >

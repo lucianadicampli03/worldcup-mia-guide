@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import { useTranslations } from "@/i18n/use-translations";
 import type { SurvivalData } from "@/types/survival";
 
@@ -10,24 +11,32 @@ export default function SurvivalSection() {
   return (
     <section id="survival" className="bg-miami-sand px-4 py-14 sm:px-6 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
-          <h2 className="text-3xl font-extrabold tracking-tight text-miami-ocean sm:text-4xl lg:text-5xl">
-            {t.survival.title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-            {t.survival.subtitle}
-          </p>
-        </header>
+        <ScrollReveal variant="fade-up-lg" className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+          <header>
+            <h2 className="text-3xl font-extrabold tracking-tight text-miami-ocean sm:text-4xl lg:text-5xl">
+              {t.survival.title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+              {t.survival.subtitle}
+            </p>
+          </header>
+        </ScrollReveal>
 
         <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
-          <PhrasesCard phrases={data.phrases} title={t.survival.usefulPhrases} />
-          <ProTipCard title={data.proTip.title} body={data.proTip.body} />
-          <GettingAroundCard
-            title={data.gettingAround.title}
-            description={data.gettingAround.description}
-            links={data.gettingAround.links}
-            emergencyLabel={t.survival.emergency}
-          />
+          <ScrollReveal variant="fade-up" delay={0}>
+            <PhrasesCard phrases={data.phrases} title={t.survival.usefulPhrases} />
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={100}>
+            <ProTipCard title={data.proTip.title} body={data.proTip.body} />
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={200}>
+            <GettingAroundCard
+              title={data.gettingAround.title}
+              description={data.gettingAround.description}
+              links={data.gettingAround.links}
+              emergencyLabel={t.survival.emergency}
+            />
+          </ScrollReveal>
         </div>
       </div>
     </section>

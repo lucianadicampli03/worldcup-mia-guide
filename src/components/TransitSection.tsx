@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "@/components/ScrollReveal";
 import TransitCard from "@/components/TransitCard";
 import { useTranslations } from "@/i18n/use-translations";
 
@@ -11,27 +12,40 @@ export default function TransitSection() {
   return (
     <section id="transit" className="bg-white px-4 py-14 sm:px-6 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
-          <h2 className="text-3xl font-extrabold tracking-tight text-miami-ocean sm:text-4xl lg:text-5xl">
-            {data.title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-            {data.subtitle}
-          </p>
-        </header>
+        <ScrollReveal variant="fade-up-lg" className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+          <header>
+            <h2 className="text-3xl font-extrabold tracking-tight text-miami-ocean sm:text-4xl lg:text-5xl">
+              {data.title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+              {data.subtitle}
+            </p>
+          </header>
+        </ScrollReveal>
 
-        <p className="mx-auto mb-8 max-w-3xl rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-center text-sm text-amber-900 sm:text-base">
-          {data.matchDayNote}
-        </p>
+        <ScrollReveal variant="fade-up" delay={80}>
+          <p className="mx-auto mb-8 max-w-3xl rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-center text-sm text-amber-900 sm:text-base">
+            {data.matchDayNote}
+          </p>
+        </ScrollReveal>
 
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-          <TransitCard option={metromover} featured />
-          <TransitCard option={metrorail} />
-          <TransitCard option={metrobus} />
-          <TransitCard option={brightline} />
+          <ScrollReveal variant="fade-up" delay={0} className="lg:col-span-2">
+            <TransitCard option={metromover} featured />
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={100}>
+            <TransitCard option={metrorail} />
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={200}>
+            <TransitCard option={metrobus} />
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={300}>
+            <TransitCard option={brightline} />
+          </ScrollReveal>
         </div>
 
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <ScrollReveal variant="fade-in" delay={120}>
+          <p className="mt-8 text-center text-sm text-slate-500">
           {data.footerMapsFrom}{" "}
           <a
             href="https://www.miamidade.gov/transportation-public-transit/"
@@ -50,7 +64,8 @@ export default function TransitSection() {
           >
             {data.brightlineMiamiCentral}
           </a>
-        </p>
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

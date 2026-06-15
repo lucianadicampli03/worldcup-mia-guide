@@ -20,7 +20,7 @@ export default function ExploreCard({ place, onExploreOptions }: ExploreCardProp
   const { t } = useTranslations();
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md">
+    <article className="smooth-card flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md">
       <div className="relative aspect-[16/10] w-full">
         <Image
           src={place.image}
@@ -99,7 +99,7 @@ export default function ExploreCard({ place, onExploreOptions }: ExploreCardProp
         <button
           type="button"
           onClick={onExploreOptions}
-          className="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-full bg-miami-ocean px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-miami-teal"
+          className="smooth-btn mt-auto inline-flex w-full items-center justify-center gap-2 rounded-full bg-miami-ocean px-4 py-2.5 text-sm font-semibold text-white hover:bg-miami-teal"
         >
           <SearchIcon />
           {t.explore.exploreOptions}

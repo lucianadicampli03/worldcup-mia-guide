@@ -12,7 +12,7 @@ export default function FoodCard({ place }: FoodCardProps) {
   const { t } = useTranslations();
 
   return (
-    <article className="flex w-[280px] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md sm:w-[300px] lg:w-full lg:shrink">
+    <article className="smooth-card flex w-[280px] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-md sm:w-[300px] lg:w-full lg:shrink">
       <div className="relative aspect-[4/3] w-full">
         <Image
           src={place.image}

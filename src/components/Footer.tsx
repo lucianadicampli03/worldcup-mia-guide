@@ -1,6 +1,7 @@
 "use client";
 
 import { InternalTermsButton } from "@/components/TermsOfUseModal";
+import ScrollReveal from "@/components/ScrollReveal";
 import { useTranslations } from "@/i18n/use-translations";
 
 export default function Footer() {
@@ -16,7 +17,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-miami-ocean text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14">
+      <ScrollReveal variant="fade-up">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
           <div>
             <div className="flex flex-wrap items-center gap-3">
@@ -92,7 +94,8 @@ export default function Footer() {
           <p>{t.footer.copyright}</p>
           <InternalTermsButton />
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
     </footer>
   );
 }

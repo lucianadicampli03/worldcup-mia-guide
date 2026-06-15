@@ -10,6 +10,8 @@ export const ptDictionary: Dictionary = {
       transit: "Transporte",
       assistant: "Assistente",
       changeLanguage: "Mudar idioma",
+      openMenu: "Abrir menu",
+      closeMenu: "Fechar menu",
     },
     hero: {
       badge: "Copa do Mundo FIFA 2026™ — Estádio de Miami",
@@ -85,6 +87,9 @@ export const ptDictionary: Dictionary = {
         "Não tenho certeza sobre isso — confira Explorar, Gastronomia, Sobrevivência ou Transporte nesta página.",
       errorGeneric: "Algo deu errado. Tente de novo ou toque em uma sugestão.",
       errorApi: "Clutch não conseguiu responder agora.",
+      teaserMessage:
+        "E aí! 🦅 Dúvidas sobre a Copa em Miami? Fala comigo!",
+      dismissTeaser: "Fechar mensagem",
       sectionLabels: {
         explore: "Explorar",
         food: "Gastronomia",

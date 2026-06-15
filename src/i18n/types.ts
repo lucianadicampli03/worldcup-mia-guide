@@ -50,6 +50,8 @@ export type UIStrings = {
     transit: string;
     assistant: string;
     changeLanguage: string;
+    openMenu: string;
+    closeMenu: string;
   };
   hero: {
     badge: string;
@@ -117,6 +119,8 @@ export type UIStrings = {
     fallbackReply: string;
     errorGeneric: string;
     errorApi: string;
+    teaserMessage: string;
+    dismissTeaser: string;
     sectionLabels: Record<string, string>;
   };
   terms: {

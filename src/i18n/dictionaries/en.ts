@@ -28,6 +28,8 @@ export const enDictionary: Dictionary = {
       transit: "Transit",
       assistant: "Assistant",
       changeLanguage: "Change language",
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
     },
     hero: {
       badge: "FIFA World Cup 2026™ — Miami Stadium",
@@ -103,6 +105,9 @@ export const enDictionary: Dictionary = {
         "I'm not sure about that one — check Explore, Food, Survival, or Transit on this page.",
       errorGeneric: "Something went wrong. Try again or tap a suggestion chip.",
       errorApi: "Clutch couldn't answer right now.",
+      teaserMessage:
+        "What's up! 🦅 World Cup in Miami? Tap me — I've got you covered!",
+      dismissTeaser: "Dismiss message",
       sectionLabels: {
         explore: "Explore",
         food: "Food",

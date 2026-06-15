@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ExploreCard from "@/components/ExploreCard";
 import ExploreModal from "@/components/ExploreModal";
+import ScrollReveal from "@/components/ScrollReveal";
 import type { ExplorePlace } from "@/types/explore";
 
 type ExploreSectionClientProps = {
@@ -17,12 +18,13 @@ export default function ExploreSectionClient({
   return (
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-        {places.map((place) => (
-          <ExploreCard
-            key={place.id}
-            place={place}
-            onExploreOptions={() => setSelectedPlace(place)}
-          />
+        {places.map((place, index) => (
+          <ScrollReveal key={place.id} variant="fade-up" delay={index * 80}>
+            <ExploreCard
+              place={place}
+              onExploreOptions={() => setSelectedPlace(place)}
+            />
+          </ScrollReveal>
         ))}
       </div>
 
