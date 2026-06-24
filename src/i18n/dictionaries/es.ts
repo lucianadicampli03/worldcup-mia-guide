@@ -14,13 +14,13 @@ export const esDictionary: Dictionary = {
       closeMenu: "Cerrar menú",
     },
     hero: {
-      badge: "Copa Mundial de la FIFA 2026™ — Estadio de Miami",
+      badge: "Miami · Copa Mundial 2026",
       titleLine1: "EL CALOR DEL PARTIDO.",
       titleLine2: "EL ALMA DE MIAMI.",
       subtitle:
         "Fútbol en el escenario mundial, agua turquesa, café cubano, callejones de arte y la energía inagotable de Miami — tu guía de la ciudad durante la Copa Mundial 2026.",
       cta: "Explorar Miami →",
-      mascotAlt: "Clutch — mascota de la Copa Mundial 2026",
+      mascotAlt: "Mascota guía de HBS Miami",
     },
     explore: {
       title: "Descubre Miami",
@@ -71,14 +71,14 @@ export const esDictionary: Dictionary = {
     },
     assistant: {
       greeting:
-        "¡Qué tal! Soy Clutch™, la mascota de la Copa Mundial 2026 en América. ¿Cómo puedo ayudarte a vivir Miami al máximo? 🦅⚽",
-      name: "Clutch™",
+        "¡Hola! Soy tu guía HBS de Miami. Pregúntame lo que quieras sobre la ciudad entre turnos. 🌴",
+      name: "Guía HBS",
       aiOnline: "IA en línea",
       closeAssistant: "Cerrar asistente",
       openAssistant: "Abrir asistente",
-      dialogLabel: "Asistente Copa Mundial Miami",
-      thinking: "Clutch está pensando",
-      thinkingPlaceholder: "Clutch está pensando...",
+      dialogLabel: "Asistente guía HBS Miami",
+      thinking: "La guía está pensando",
+      thinkingPlaceholder: "La guía está pensando...",
       typePlaceholder: "Escribe tu pregunta...",
       sendMessage: "Enviar mensaje",
       disclaimer:
@@ -86,9 +86,9 @@ export const esDictionary: Dictionary = {
       fallbackReply:
         "No estoy seguro de eso — consulta Explorar, Gastronomía, Supervivencia o Transporte en esta página.",
       errorGeneric: "Algo salió mal. Inténtalo de nuevo o toca una sugerencia.",
-      errorApi: "Clutch no pudo responder en este momento.",
+      errorApi: "No pude responder en este momento.",
       teaserMessage:
-        "¿Qué tal! 🦅 ¿Dudas sobre el Mundial en Miami? ¡Escríbeme!",
+        "¿Consejos para Miami? ¡Tócame — te ayudo!",
       dismissTeaser: "Cerrar mensaje",
       sectionLabels: {
         explore: "Explorar",
@@ -115,8 +115,8 @@ export const esDictionary: Dictionary = {
           accent: "ocean",
         },
         {
-          title: "3. Descargo de responsabilidad: asistente virtual con IA (Clutch™)",
-          body: `El asistente virtual "Clutch™" utiliza tecnología de IA para ofrecer sugerencias sobre la ciudad. Estas respuestas no son directivas oficiales; el personal debe verificar la información crítica con sus supervisores. HBS no se responsabiliza de inexactitudes generadas por la IA.`,
+          title: "3. Descargo de responsabilidad: asistente virtual con IA",
+          body: `El asistente virtual con IA utiliza tecnología para ofrecer sugerencias sobre la ciudad. Estas respuestas no son directivas oficiales; el personal debe verificar la información crítica con sus supervisores. HBS no se responsabiliza de inexactitudes generadas por la IA.`,
           accent: "ocean",
         },
         {
@@ -438,7 +438,7 @@ export const esDictionary: Dictionary = {
   },
   assistant: {
     greeting:
-      "¡Qué tal! Soy Clutch™, la mascota de la Copa Mundial 2026 en América. ¿Cómo puedo ayudarte a vivir Miami al máximo? 🦅⚽",
+      "¡Hola! Soy tu guía HBS de Miami. Pregúntame lo que quieras sobre la ciudad entre turnos. 🌴",
     suggestions: [
       {
         icon: "food",

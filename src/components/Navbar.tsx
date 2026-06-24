@@ -41,11 +41,12 @@ export default function Navbar() {
           onClick={closeMenu}
         >
           <Image
-            src="/images/fwc2026-logo.png"
-            alt="Fifa World Cup 2026"
-            width={24}
-            height={34}
-            className="h-7 w-auto sm:h-8"
+            src="/images/hbs-logo.png"
+            alt="HBS"
+            width={862}
+            height={844}
+            className="h-7 w-auto shrink-0 rounded-md sm:h-8"
+            priority
           />
           Miami <span className="text-miami-teal">26</span>
         </a>

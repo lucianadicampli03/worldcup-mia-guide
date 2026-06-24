@@ -38,10 +38,10 @@ export default function Hero() {
         </a>
 
         <Image
-          src="/images/clutch.png"
+          src="/images/hbs-mascot.png"
           alt={t.hero.mascotAlt}
-          width={480}
-          height={640}
+          width={862}
+          height={844}
           priority
           unoptimized
           className="hero-mascot-enter relative z-10 mt-6 h-48 w-auto object-contain sm:h-56 lg:h-64"

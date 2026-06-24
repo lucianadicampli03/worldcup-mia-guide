@@ -43,7 +43,7 @@ export default function AssistantButton() {
   const messageIdRef = useRef(0);
 
   useEffect(() => {
-    if (sessionStorage.getItem("clutch-teaser-dismissed") !== "1") {
+    if (sessionStorage.getItem("hbs-guide-teaser-dismissed") !== "1") {
       setShowTeaser(true);
     }
   }, []);
@@ -55,7 +55,7 @@ export default function AssistantButton() {
   function dismissTeaser(event: MouseEvent) {
     event.stopPropagation();
     setShowTeaser(false);
-    sessionStorage.setItem("clutch-teaser-dismissed", "1");
+    sessionStorage.setItem("hbs-guide-teaser-dismissed", "1");
   }
 
   function openAssistant() {
@@ -196,14 +196,7 @@ export default function AssistantButton() {
         >
           <header className="flex items-center justify-between bg-miami-ocean px-4 py-3 text-white">
             <div className="flex items-center gap-3">
-              <Image
-                src="/images/clutch-avatar.png"
-                alt=""
-                width={40}
-                height={40}
-                unoptimized
-                className="h-10 w-10 rounded-full bg-white/10 object-cover object-top"
-              />
+              <AssistantAvatar className="h-10 w-10" alt="" />
               <div>
                 <p className="font-bold leading-tight">{t.assistant.name}</p>
                 <p className="flex items-center gap-1 text-xs text-white/80">
@@ -345,13 +338,9 @@ export default function AssistantButton() {
         aria-label={open ? t.assistant.closeAssistant : t.assistant.openAssistant}
       >
         <span className="absolute -right-0.5 -top-0.5 h-3.5 w-3.5 rounded-full border-2 border-white bg-miami-coral" />
-        <Image
-          src="/images/clutch-avatar.png"
-          alt="Clutch mascot"
-          width={48}
-          height={48}
-          unoptimized
-          className="h-10 w-10 rounded-full object-cover object-top sm:h-12 sm:w-12"
+        <AssistantAvatar
+          className="h-10 w-10 sm:h-12 sm:w-12"
+          alt={t.hero.mascotAlt}
         />
       </button>
     </div>
@@ -438,6 +427,19 @@ function SendIcon() {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden>
       <path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z" />
     </svg>
+  );
+}
+
+function AssistantAvatar({ className, alt }: { className?: string; alt: string }) {
+  return (
+    <Image
+      src="/images/hbs-avatar.png"
+      alt={alt}
+      width={862}
+      height={844}
+      unoptimized
+      className={`shrink-0 rounded-full object-cover object-center ${className ?? ""}`}
+    />
   );
 }
 

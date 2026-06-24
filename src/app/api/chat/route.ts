@@ -172,14 +172,14 @@ export async function POST(request: NextRequest) {
     console.error("Gemini API error:", lastStatus, lastError);
 
     let userMessage =
-      "Clutch couldn't reach the AI service. Try again in a moment.";
+      "The assistant couldn't reach the AI service. Try again in a moment.";
 
     if (
       lastStatus === 429 ||
       lastError?.error?.status === "RESOURCE_EXHAUSTED"
     ) {
       userMessage =
-        "Clutch is getting a lot of questions right now. Wait 30–60 seconds and try again, or use the suggestion chips below.";
+        "The assistant is getting a lot of questions right now. Wait 30–60 seconds and try again, or use the suggestion chips below.";
     } else if (
       lastError?.error?.status === "INVALID_ARGUMENT" ||
       lastStatus === 400
